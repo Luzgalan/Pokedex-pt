@@ -1,0 +1,81 @@
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    /* background-color: burlywood; */
+    background-image: url(https://img.freepik.com/vector-gratis/fondo-papel-comico_23-2148921149.jpg?w=1800&t=st=1705552552~exp=1705553152~hmac=fcdbec2857532140492f7e89b0cc25a990e8dd03bea75cdf6c9f6aec32ff94b6)
+}
+
+input{
+   border: solid 2px; 
+   width: 50px;
+   font-weight: bold;
+   font-size: 15px;
+   padding: 8px 0 8px 0;
+   border-radius: 15px;
+   float: left;
+   color: #E54F4F;
+   text-align: center;
+   
+}
+button{
+      width: 80px;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 10px;
+      border: none;
+      border-radius: 10px;
+      padding: 8px 0 8px 0;
+      background-color: #00B1AA;
+      margin-bottom: 6px;
+}
+button:hover{
+    background-color: #FFAA33 !important;  
+}
+i{
+    color: white;
+}
+#infoPokemon{
+    padding: 10px;
+}
+.flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.container{
+    background-color: #ffff;
+    box-shadow: 0 5px #4682b1;
+    border: solid #4682b1;
+    border-radius: 8%;
+    width: 500px;
+    height: auto;
+    padding: 20px;
+    margin: 2% auto;   
+}
+.headerSection{
+height: 40px;
+margin: 10px auto;
+}
+
+#iptIdPokemon{
+    width: 50px;
+}
+#iptNombrePokemon {
+    width: 250px;
+    text-transform: capitalize;
+}
+#iptBusqueda{
+    width: 200px;
+}
+.contenedorInfImg{
+    user-select: none;
+    background-color: white;
+    border: solid 2px #FFAA33;
+border-radius: 15px;
+width: 250px;
+height: 290px;
+margin: 0, auto;
+
+}
