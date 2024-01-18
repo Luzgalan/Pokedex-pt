@@ -4,8 +4,6 @@ const iptBusqueda = document.getElementById('iptBusqueda')
 const imgPokemon = document.getElementById('imgPokemon')
 const infoPokemon = document.getElementById('infoPokemon')
 
-const proxyUrl = 'https://cors-anywhere.herokuapp.com/';  //Proxy para poder saltar el CORS de localhost
-
 let idActual = 1;
 
 /* -------------------------------------------------------------------------- */
@@ -24,7 +22,7 @@ let idActual = 1;
 const getByIdOrName = async(term) =>{
     const url = `https://pokeapi.co/api/v2/pokemon/${term}`
     try {
-        const response = await fetch(proxyUrl + url)
+        const response = await fetch(url)
         if(response.ok){
             return response.json()
         }else{
