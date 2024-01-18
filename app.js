@@ -1,3 +1,4 @@
+// const proxyUrl = 'https://cors-anywhere.herokuapp.com/';  //Proxy para poder saltar el CORS de localhost
 const iptIdPokemon = document.getElementById('iptIdPokemon')
 const iptNombrePokemon = document.getElementById('iptNombrePokemon')
 const iptBusqueda = document.getElementById('iptBusqueda')
@@ -70,21 +71,20 @@ const searchPokemon = (term) => {
         const nombre = `<p><b>Nombre:</b> ${response.name} </p>`
         const grass = `<p><b>Tipo:</b> ${response.types.map(item=>item.type.name)} </p>`
         const stats = `<p><b>Estadisticas:</b> <br>${response.stats.map(item=>`${item.stat.name.toUpperCase()}: ${item.base_stat}<br>`)} </p>`
-        console.log(stats)
         infoPokemon.innerHTML= nombre + grass + stats.replace(/<br>,/g, "<br>");
-        console.log(response)
       })
       .catch(error => {
         iptIdPokemon.value = 0
         iptNombrePokemon.value = error
         imgPokemon.src = 'https://img.freepik.com/vector-gratis/ups-error-404-ilustracion-concepto-robot-roto_114360-5529.jpg?w=826&t=st=1705527659~exp=1705528259~hmac=2a8326b4161a3fff14eb8e8f4f6d07588f3883d20436bfb5587e1b88a901ea28';
+        infoPokemon.innerHTML = ""
       })
   }
 
 /* -------------------------------------------------------------------------- */
 /*                                 FIRST LOAD                                 */
 /* -------------------------------------------------------------------------- */
-searchPokemon(1)
+searchPokemon(idActual)
 
 /* -------------------------------------------------------------------------- */
 /*                                   EVENTS                                   */
